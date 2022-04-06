@@ -1,0 +1,13 @@
+python 3.9.5
+pre-commit 2.14.0
+terraform 1.0.5
+golang 1.17
+terraform-docs 0.15.0
+terraform-ls 0.21.0
+yarn 1.22.11
+poetry 1.1.8
+postgres 13.4
+glab 1.21.1
+github-cli 2.0.0
+tflint 0.32.1
+awscli 2.4.0

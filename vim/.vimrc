@@ -222,8 +222,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "fzf 
 set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :GFiles<Cr>
-nnoremap <C-P> :Files<Cr>
+nnoremap <C-P> :GFiles<Cr>
+nnoremap <C-m> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 nnoremap <leader><tab> :Buffers<Cr>
 
@@ -237,4 +237,4 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 's
 " Pydocstring
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
-nmap <silent> <C-m> <Plug>(pydocstring)
+nmap <silent> <C-o> <Plug>(pydocstring)

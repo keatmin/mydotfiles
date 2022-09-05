@@ -1,6 +1,6 @@
 awscli 2.4.0
 fzf 0.27.2
-github-cli 2.0.0
+github-cli 2.14.7
 glab 1.21.1
 golang 1.17
 helm 3.7.0
@@ -17,5 +17,5 @@ terraform-docs 0.15.0
 terraform-ls 0.21.0
 tflint 0.32.1
 tfsec 0.58.12
-vim 8.2.3455
+vim 9.0.0381
 yarn 1.22.11

@@ -44,10 +44,18 @@ repos:
 
   # Terraform
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.74.2
+    rev: v1.75.0
     hooks:
       - id: terraform_fmt
       - id: terraform_docs
       - id: terraform_validate
       - id: terraform_tflint
       - id: terraform_tfsec
+  # Golang
+  - repo: https://github.com/TekWizely/pre-commit-golang
+    rev: v1.0.0-beta.5
+    hooks:
+      - id: go-fmt
+        args:
+          - "-w"
+      - id: go-vet

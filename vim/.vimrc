@@ -237,4 +237,4 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 's
 " Pydocstring
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
-nmap <silent> <C-o> <Plug>(pydocstring)
+nmap <silent> <leader>o <Plug>(pydocstring)

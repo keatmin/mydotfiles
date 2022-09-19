@@ -12,20 +12,51 @@ Plug 'joshdick/onedark.vim'
 " Git 
 Plug 'tpope/vim-fugitive'
 
+" Surround
+Plug 'tpope/vim-surround'
+
 " Python
 Plug 'heavenshell/vim-pydocstring' 
+
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-" Neovim
+
+" Neovim treesitter 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Neovim lsp
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" neovim formatter 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'lukas-reineke/lsp-format.nvim'
+
+" For vsnip 
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
 syntax on
 set laststatus=2
 
 " Set number and relative number
-set number relativenumber
+set number relativenumber 
+
+" case matching
+set smartcase ignorecase
 " Set highlightsearch auto
 set hlsearch
 
@@ -33,11 +64,14 @@ lua << EOF
 servers = {
     'pyright',
     'terraformls',
-    'gopls'
-    --'tsserver', -- uncomment for typescript. See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for other language servers
+    'tsserver' 
 }
 require('treesitter-config')
+require("mason").setup()
+require("mason-lspconfig").setup()
 require('lsp-config')
+require('cmp-config')
+require('nullls-config')
 EOF
 
 " To start nerd tree
@@ -49,6 +83,14 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Leader remap
+let mapleader=","
+nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
+nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
+
+" Refresh config
+nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " Remap NerdTree
 nmap <C-n> :NERDTreeToggle<CR>
@@ -71,8 +113,6 @@ nnoremap <leader><tab> :Buffers<Cr>
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
 
 " Pydocstring
-let g:pydocstring_doq_path = '/Users/keat/.local/pipx/venvs/doq'
+let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
-nmap <silent> <leader>o <Plug>(pydocstring)
-
-
+nmap <silent> <leader>d <Plug>(pydocstring)

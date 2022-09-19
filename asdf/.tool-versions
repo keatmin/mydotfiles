@@ -4,6 +4,7 @@ github-cli 2.14.7
 glab 1.21.1
 golang 1.18
 helm 3.7.0
+hadolint 2.10.0 
 jq 1.6
 kubectl 1.22.2
 kubectx 0.9.4

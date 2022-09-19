@@ -76,12 +76,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+asdf
 git
 gcloud
 pipenv
 zsh-syntax-highlighting
 zsh-autosuggestions
 poetry
+terraform
+golang
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -134,14 +137,11 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-alias set-pre-commit="cp ~/Projects/personal/pre-commit-config/.pre-commit-config.yaml ."
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # Created by `userpath` on 2021-04-19 11:13:43
 export PATH="$PATH:/Users/keat/.local/bin"
-
-. /usr/local/Cellar/asdf/0.8.1_1/asdf.sh
 
 
 function assumerole() {
@@ -160,3 +160,6 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+alias vi=nvim
+alias set-pre-commit="cp ~/Projects/personal/mydotfiles/pre-commit-config/.pre-commit-config.yaml ."

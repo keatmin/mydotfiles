@@ -94,7 +94,7 @@ nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 
 " edit config
 nmap <leader>ecv :vs ~/.config/nvim/init.vim<CR>
-nmap <leader>ecs :s ~/.config/nvim/init.vim<CR>
+nmap <leader>ecs :sp ~/.config/nvim/init.vim<CR>
 " Refresh config
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 

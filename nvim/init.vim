@@ -6,7 +6,10 @@ Plug 'junegunn/fzf.vim'
 
 " File explorer
 Plug 'preservim/nerdtree'
-"
+
+" Commenting
+Plug 'tpope/vim-commentary'
+
 " For text highlighting 
 Plug 'joshdick/onedark.vim'
 " Git 
@@ -64,7 +67,7 @@ lua << EOF
 servers = {
     'pyright',
     'terraformls',
-    'tsserver'
+    'tsserver' 
 }
 require('treesitter-config')
 require("mason").setup()
@@ -89,6 +92,9 @@ let mapleader=","
 nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 
+" edit config
+nmap <leader>ecv :vs ~/.config/nvim/init.vim<CR>
+nmap <leader>ecs :s ~/.config/nvim/init.vim<CR>
 " Refresh config
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 

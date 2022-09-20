@@ -64,7 +64,7 @@ lua << EOF
 servers = {
     'pyright',
     'terraformls',
-    'tsserver' 
+    'tsserver'
 }
 require('treesitter-config')
 require("mason").setup()

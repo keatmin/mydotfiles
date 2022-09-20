@@ -98,6 +98,9 @@ nmap <leader>ecs :sp ~/.config/nvim/init.vim<CR>
 " Refresh config
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 
+" Terminal mapping
+tmap <ESC> <C-\><C-n>
+
 " Remap NerdTree
 nmap <C-n> :NERDTreeToggle<CR>
 
@@ -112,13 +115,17 @@ colorscheme onedark
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-P> :GFiles<Cr>
 nnoremap <C-m> :Files<Cr>
+nnoremap <leader><CR> :Files ~/Projects<Cr>
 nnoremap <C-g> :Rg<Cr>
 nnoremap <leader><tab> :Buffers<Cr>
 
 " Markdown highlighting
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
+let g:markdown_fenced_languages = [ 'html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go' ]
 
 " Pydocstring
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
 nmap <silent> <leader>d <Plug>(pydocstring)
+
+" Fugitive mapping
+nmap <leader>gd :Gdiffsplit<CR>

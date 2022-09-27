@@ -58,8 +58,11 @@ set laststatus=2
 " Set number and relative number
 set number relativenumber 
 
+set shiftwidth=4 tabstop=4 expandtab smartindent
+
 " case matching
-set smartcase ignorecase
+set smartcase ignorecase 
+
 " Set highlightsearch auto
 set hlsearch
 
@@ -67,7 +70,8 @@ lua << EOF
 servers = {
     'pyright',
     'terraformls',
-    'tsserver' 
+    'tsserver',
+    'gopls'
 }
 require('treesitter-config')
 require("mason").setup()
@@ -114,13 +118,13 @@ colorscheme onedark
 "fzf 
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-P> :GFiles<Cr>
-nnoremap <C-m> :Files<Cr>
+nnoremap <C-m> :Files <Cr>
 nnoremap <leader><CR> :Files ~/Projects<Cr>
 nnoremap <C-g> :Rg<Cr>
 nnoremap <leader><tab> :Buffers<Cr>
 
 " Markdown highlighting
-let g:markdown_fenced_languages = [ 'html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go' ]
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
 
 " Pydocstring
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
@@ -129,3 +133,6 @@ nmap <silent> <leader>d <Plug>(pydocstring)
 
 " Fugitive mapping
 nmap <leader>gd :Gdiffsplit<CR>
+
+" Enable plugin indentation
+filetype plugin indent on

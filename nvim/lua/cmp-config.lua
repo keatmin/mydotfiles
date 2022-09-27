@@ -53,7 +53,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'treesitter' },
+        { name = 'cmdline' },
         { name = 'vsnip' }, -- For vsnip users.
         { name = 'nvim_lsp_signature_help' },
         { name = 'path' },

@@ -8,6 +8,7 @@ hadolint 2.10.0
 jq 1.6
 kubectl 1.22.2
 kubectx 0.9.4
+nodejs 18.9.1
 neovim 0.7.2
 poetry 1.1.8
 postgres 13.4

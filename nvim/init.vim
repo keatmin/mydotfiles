@@ -60,6 +60,8 @@ set number relativenumber
 
 set shiftwidth=4 tabstop=4 expandtab smartindent
 
+set nobackup
+set nowritebackup
 " case matching
 set smartcase ignorecase 
 

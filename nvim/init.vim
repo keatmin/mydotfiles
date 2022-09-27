@@ -72,6 +72,7 @@ lua << EOF
 servers = {
     'pyright',
     'terraformls',
+    'tflint',
     'tsserver',
     'gopls'
 }

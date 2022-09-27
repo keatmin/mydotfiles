@@ -132,7 +132,12 @@ export PATH="$HOME/.serverless/bin:$PATH"
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 autoload -U +X bashcompinit && bashcompinit
+# terraform completions 
 complete -o nospace -C /usr/local/bin/terraform terraform
+# pipx completions 
+eval "$(register-python-argcomplete pipx)"
+# AWS completions
+complete -C '/usr/local/bin/aws_completer' aws
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -153,10 +158,6 @@ function assumerole() {
   export AWS_SECRET_ACCESS_KEY=$(echo $aws_credentials|jq '.Credentials.SecretAccessKey'|tr -d '"')
   export AWS_SESSION_TOKEN=$(echo $aws_credentials|jq '.Credentials.SessionToken'|tr -d '"')
 }
-# AWS
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

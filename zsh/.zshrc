@@ -89,35 +89,6 @@ golang
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#CLOUDSDK_HOME=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk
-#source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-#source  /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/keat/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/keat/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -133,11 +104,11 @@ export PATH="$HOME/.serverless/bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 # terraform completions 
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C '`which terraform`' terraform
 # pipx completions 
 eval "$(register-python-argcomplete pipx)"
 # AWS completions
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C '`which aws_completer`' aws
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

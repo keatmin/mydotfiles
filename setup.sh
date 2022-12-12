@@ -1,5 +1,5 @@
 # Install oh my zsh 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/master/tools.install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # zsh-completions 
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 # zsh syntax-highlighting
@@ -21,3 +21,12 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 # Install docker
 brew install --cask docker
 brew install asdf 
+
+
+# Add plugins
+cut -d' ' -f1 .tool-versions|xargs -I{} asdf plugin add {}
+asdf install
+
+# Add SSH key for auth and signing key and configure git to use SSH key
+# git config --global gpg.format ssh
+# git config --global user.signingkey /PATH/TO/.SSH/KEY.PUB

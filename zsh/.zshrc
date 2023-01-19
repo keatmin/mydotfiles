@@ -129,4 +129,4 @@ function assumerole() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias vi=nvim
-alias set-pre-commit="cp ~/Projects/personal/mydotfiles/pre-commit-config/.pre-commit-config.yaml ."
+alias set-pre-commit="cp ~/Projects/personal/mydotfiles/precommit/.pre-commit-config.yaml ."

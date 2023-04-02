@@ -22,7 +22,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 brew install --cask docker
 brew install asdf 
 
-
 # Add plugins
 cut -d' ' -f1 .tool-versions|xargs -I{} asdf plugin add {}
 asdf install

@@ -27,10 +27,6 @@ cut -d' ' -f1 .tool-versions|xargs -I{} asdf plugin add {}
 asdf install
 
 sh ./git/setup.sh
-# Add SSH key for auth and signing key and configure git to use SSH key
-# git config --global gpg.format ssh
-# git config --global user.signingkey /PATH/TO/.SSH/KEY.PUB
-
 
 #Symlink files
 ln -s -f ${PWD}/zsh/.zshrc ~/.zshrc

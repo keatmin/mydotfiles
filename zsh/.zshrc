@@ -309,3 +309,7 @@ _gh()
 if [ "$funcstack[1]" = "_gh" ]; then
     _gh
 fi
+
+
+# direnv
+eval "$(direnv hook zsh)"

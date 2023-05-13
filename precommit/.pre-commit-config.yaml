@@ -13,13 +13,13 @@ repos:
     hooks:
       - id: detect-secrets
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.3.1
+    rev: v1.5.1
     hooks:
       - id: forbid-crlf
       - id: remove-crlf
   # Python
   - repo: https://github.com/psf/black
-    rev: 22.12.0
+    rev: 23.3.0
     hooks:
       - id: black
   - repo: https://github.com/pycqa/flake8
@@ -32,20 +32,20 @@ repos:
     hooks:
       - id: reorder-python-imports
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.991
+    rev: v1.3.0
     hooks:
       - id: mypy
 
   # Docker
   - repo: https://github.com/AleksaC/hadolint-py
-    rev: v2.10.0
+    rev: v2.12.0.2
     hooks:
       - id: hadolint
         args: [--ignore, DL3018]
 
   # Terraform
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.77.0
+    rev: v1.79.1
     hooks:
       - id: terraform_fmt
       - id: terraform_docs

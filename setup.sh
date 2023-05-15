@@ -31,6 +31,7 @@ sh ./git/setup.sh
 #Symlink files
 ln -s -f ${PWD}/zsh/.zshrc ~/.zshrc
 ln -s -f ${PWD}/asdf/.tool-versions ~/.tool-versions
+ln -s -f ${PWD}/git/.gitignore_global ~/.gitignore_global
 
 
 gh config set editor nvim

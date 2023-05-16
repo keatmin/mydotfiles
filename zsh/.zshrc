@@ -34,7 +34,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -65,7 +65,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -78,19 +78,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 asdf
 git
-gcloud
-pipenv
 zsh-syntax-highlighting
 zsh-autosuggestions
-poetry
 terraform
-golang
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# Added by serverless binary installer
-export PATH="$HOME/.serverless/bin:$PATH"
 
 # tabtab source for packages
 # uninstall by removing these lines

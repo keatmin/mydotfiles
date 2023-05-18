@@ -104,9 +104,6 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
-# Created by `userpath` on 2021-04-19 11:13:43
-export PATH="$PATH:/Users/keat/.local/bin"
-
 
 function assumerole() {
   aws_credentials=$(aws sts assume-role --role-arn "arn:aws:iam::${1}:role/${2}" --role-session-name "keat" --serial-number "arn:aws:iam::${1}:mfa/${3}" --token-code $4) 
@@ -306,3 +303,6 @@ fi
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# Created by `pipx` on 2023-05-16 04:11:39
+export PATH="$PATH:$HOME/.local/bin"

@@ -21,7 +21,7 @@ shellcheck 0.8.0
 terraform 1.0.9
 terraform-docs 0.15.0
 terraform-ls 0.31.0
-tflint 0.32.1
+tflint 0.46.1
 tfsec 0.58.12
 yarn 1.22.11
 checkov 2.3.245

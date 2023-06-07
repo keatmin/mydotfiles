@@ -1,4 +1,5 @@
 awscli 2.9.16
+checkov 2.3.245
 direnv 2.32.2
 fzf 0.33.0
 github-cli 2.30.0
@@ -9,6 +10,7 @@ kubectl 1.26.1
 kubectx 0.9.4
 neovim 0.9.0
 nodejs 18.9.1
+pipx 1.2.0
 postgres 13.4
 pre-commit 2.14.0
 python 3.9.5
@@ -21,4 +23,3 @@ terraform-ls 0.31.0
 tflint 0.46.1
 tfsec 0.58.12
 yarn 1.22.11
-checkov 2.3.245

@@ -10,3 +10,4 @@ git config --global core.excludesFile "$(pwd)/git/.gitignore_global"
 
 git config --global push.default current
 
+git config --global init.templateDir ~/.git-template

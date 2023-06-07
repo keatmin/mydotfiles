@@ -1,3 +1,4 @@
+#!/bin/bash
 set -uo
 
 # Install oh my zsh 
@@ -36,3 +37,4 @@ ln -s -f ${PWD}/git/.gitignore_global ~/.gitignore_global
 
 
 gh config set editor nvim
+sh ./precommit/setup.sh

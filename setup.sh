@@ -1,10 +1,11 @@
+set -uo
+
 # Install oh my zsh 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # zsh-completions 
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 # zsh syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -23,7 +24,7 @@ brew install --cask docker
 brew install asdf 
 
 # Add plugins
-cut -d' ' -f1 .tool-versions|xargs -I{} asdf plugin add {}
+cut -d' ' -f1 asdf/.tool-versions|xargs -I{} asdf plugin add {}
 asdf install
 
 sh ./git/setup.sh

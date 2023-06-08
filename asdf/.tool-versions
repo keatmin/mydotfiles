@@ -17,6 +17,7 @@ python 3.9.5
 ripgrep 13.0.0
 ruby 2.7.7
 shellcheck 0.8.0
+stylua 0.17.1
 terraform 1.0.9
 terraform-docs 0.15.0
 terraform-ls 0.31.0

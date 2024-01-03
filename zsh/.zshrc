@@ -81,6 +81,7 @@ git
 zsh-syntax-highlighting
 zsh-autosuggestions
 terraform
+kubectl
 )
 
 source $ZSH/oh-my-zsh.sh

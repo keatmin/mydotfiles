@@ -26,3 +26,7 @@ terraform-ls 0.31.0
 tflint 0.46.1
 tfsec 0.58.12
 yarn 1.22.11
+sqlite 3.42.0
+java openjdk-21
+jq 1.6
+cookiecutter 2.5.0

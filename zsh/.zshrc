@@ -97,14 +97,12 @@ complete -o nospace -C '`which terraform`' terraform
 eval "$(register-python-argcomplete pipx)"
 # AWS completions
 complete -C '`which aws_completer`' aws
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
 
 source <(kubectl completion zsh)
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-
 
 function assumerole() {
   aws_credentials=$(aws sts assume-role --role-arn "arn:aws:iam::${1}:role/${2}" --role-session-name "keat" --serial-number "arn:aws:iam::${1}:mfa/${3}" --token-code $4) 

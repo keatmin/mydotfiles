@@ -303,6 +303,5 @@ fi
 # direnv
 eval "$(direnv hook zsh)"
 
-# Created by `pipx` on 2023-05-16 04:11:39
 export PATH="$PATH:$HOME/.local/bin"
 export PATH=$PATH:~/.docker/bin

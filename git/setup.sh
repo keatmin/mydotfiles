@@ -1,9 +1,9 @@
 #!/bin/sh
 git config --global core.editor nvim 
 git config --global gpg.format ssh
-# git config --global user.signingkey /PATH/TO/.SSH/KEY.PUB
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
 # Push to same name
-# git config --global commit.gpgsign true
+git config --global commit.gpgsign true
 git config --global init.defaultbranch main
 git config --global commit.template "$(pwd)/git/.gitmessage.txt"
 git config --global core.excludesFile "$(pwd)/git/.gitignore_global"

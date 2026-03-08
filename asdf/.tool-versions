@@ -17,7 +17,6 @@ postgres 13.4
 pre-commit 3.7.1
 python 3.12.3
 ripgrep 14.1.0
-ruby 2.7.7
 shellcheck 0.8.0
 sqlite 3.42.0
 stylua 0.20.0

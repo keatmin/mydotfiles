@@ -21,6 +21,12 @@ asdf install
 # Git setup
 sh ./git/setup.sh
 
+# Symlink opencode config
+mkdir -p ~/.config/opencode
+ln -s -f ${PWD}/opencode/skills ~/.config/opencode/skills
+ln -s -f ${PWD}/opencode/command ~/.config/opencode/command
+ln -s -f ${PWD}/opencode/opencode.jsonc ~/.config/opencode/opencode.jsonc
+
 ln -s -f ${PWD}/asdf/.tool-versions ~/.tool-versions
 ln -s -f ${PWD}/git/.gitignore_global ~/.gitignore_global
 

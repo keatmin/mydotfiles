@@ -28,6 +28,12 @@ asdf install
 
 sh ./git/setup.sh
 
+#Symlink opencode config
+mkdir -p ~/.config/opencode
+ln -s -f ${PWD}/opencode/skills ~/.config/opencode/skills
+ln -s -f ${PWD}/opencode/command ~/.config/opencode/command
+ln -s -f ${PWD}/opencode/opencode.jsonc ~/.config/opencode/opencode.jsonc
+
 #Symlink files
 ln -s -f ${PWD}/zsh/.zshrc ~/.zshrc
 ln -s -f ${PWD}/asdf/.tool-versions ~/.tool-versions

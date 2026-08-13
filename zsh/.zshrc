@@ -305,3 +305,6 @@ eval "$(direnv hook zsh)"
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH=$PATH:~/.docker/bin
+
+# opencode
+export PATH=/Users/keat/.opencode/bin:$PATH
